@@ -1,0 +1,288 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 21}
+\author{KUSUMA PRIYA\\EE20MTECH11007}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download codes from 
+%
+\begin{lstlisting}
+https://github.com/KUSUMAPRIYAPULAVARTY/assignment21
+\end{lstlisting}
+%
+ 
+\section{QUESTION}
+Construct a linear operator $T$ with minimal polynomial $x^2(x-1)^2$ and characteristic polynomial $x^3(x-1)^4$.Describe the primary decomposition of the vector space under $T$ and find the projections on the primary components.Find a basis in which the matrix $T$ is in Jordan form.Also find an explicit direct sum decomposition of the space into $T$cyclic subspaces as in theorem 3 and give the invariant factors.
+
+%
+
+\section{Solution}
+$T:\vec{V}\rightarrow \vec{V}$ is a linear operator.\\
+Characteristic polynomial
+\begin{align}
+    f(x)=x^3(x-1)^4
+\end{align}
+Minimal polynomial
+\begin{align}
+    p(x)=x^2(x-1)^2
+\end{align}
+The jordan block matrix corresponding to eigen value 0 is
+\begin{align}
+    \vec{J}_1=\myvec{0&1&0\\0&0&0\\0&0&0}
+\end{align}
+One of the possible jordan block matrix corresponding to eigen value 1 is
+\begin{align}
+   \vec{J}_2=\myvec{1&1&0&0\\0&1&0&0\\0&0&1&1\\0&0&0&1}  
+\end{align}
+The jordan form of transformation matrix $\vec{T}$ is
+\begin{align}
+    \vec{J}=\myvec{\vec{J}_1&\vec{0}\\\vec{0}&\vec{J}_2}\\
+    =\myvec{0&1&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&1&1&0&0\\0&0&0&0&1&0&0\\0&0&0&0&0&1&1\\0&0&0&0&0&0&1}
+    \end{align}
+     $\vec{T},\vec{J}$ are similar matrices.
+    \subsection{Primary decomposition,Finding the basis}
+  According to primary decomposition theorem 
+  \begin{align}
+  \text{If }p(x)={p_{1} (x)}^{r_{1}}{p_{2} (x)}^{r_{2}},\\
+      \vec{V}=\vec{V}_1+\vec{V}_2\\
+      \vec{V}_i=\text{Null space of} (p_i(\vec{T}))^r_i\\
+      {p_{1} (x)}^{r_{1}}=x^2\\
+      {p_{2} (x)}^{r_{2}}=(x-1)^2
+  \end{align}
+Consider Null space of $\vec{J}^2$
+\begin{align}
+   \vec{J}^2=\myvec{0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&1&2&0&0\\0&0&0&0&1&0&0\\0&0&0&0&0&1&2\\0&0&0&0&0&0&1}\label{1}\\
+   \text{Nullity of } \vec{J}^2=3
+\end{align}
+
+From \eqref{1},the basis for the nullspace is
+\begin{align}
+    \cbrak{\vec{v}_1,\vec{v}_2,\vec{v}_3}\\
+    \vec{v}_1=\myvec{1\\0\\0\\0\\0\\0\\0},\vec{v_2}=\myvec{0\\1\\0\\0\\0\\0\\0},\vec{v}_3=\myvec{0\\0\\1\\0\\0\\0\\0}
+\end{align}
+Similarly consider Nullspace of $(\vec{J}-\vec{I})^2$ 
+\begin{align}
+  (\vec{J}-\vec{I})^2=\myvec{1&-2&0&0&0&0&0\\0&1&0&0&0&0&0\\0&0&1&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0}  \label{2}\\
+   \text{Nullity of }  (\vec{J}-\vec{I})^2=4
+\end{align}
+From \eqref{2},the basis for the nullspace is
+\begin{align}
+    \cbrak{\vec{v}_4,\vec{v}_5,\vec{v}_6,\vec{v}_7}\\
+    \vec{v}_4=\myvec{0\\0\\0\\1\\0\\0\\0},\vec{v_5}=\myvec{0\\0\\0\\0\\1\\0\\0},\vec{v}_6=\myvec{0\\0\\0\\0\\0\\1\\0},\vec{v}_7=\myvec{1\\0\\0\\0\\0\\0\\1}
+\end{align}
+So $\vec{T}$ is similar to block diagonal jordan matrix $\vec{J}$ in the basis 
+\begin{align}
+    \cbrak{\vec{v}_1,\vec{v}_2,\vec{v}_3,\vec{v}_4,\vec{v}_5,\vec{v}_6,\vec{v}_7}
+\end{align}
+which is the standard ordered basis. So,
+\begin{align}
+   \vec{T}=\vec{J} 
+\end{align}
+\subsection{Projections}
+The projection matrices $\vec{E}_1,\vec{E}_2$ are such that
+
+   \begin{enumerate}
+       \item for $i \in [1,2]$\begin{align}
+           \vec{E}_i(\vec{v})=\begin{cases}
+          \vec{v} & \text{ for }  \vec{v} \in \vec{V}_i\\
+          0 & \text{ for } \vec{v} \notin \vec{V}_i
+       \end{cases}
+       \end{align}
+       \item \begin{align}
+           (\vec{E}_i)^2=\vec{E}_i
+       \end{align}
+       \item \begin{align}
+           \vec{E}_1+\vec{E}_2=\vec{I}
+       \end{align}
+   \end{enumerate} 
+Therefore,
+\begin{align}
+    \vec{E}_1=\myvec{\vec{I}_3&\vec{0}\\\vec{0}&\vec{0}}\\
+    =\myvec{1&0&0&0&0&0&0\\0&1&0&0&0&0&0\\0&0&1&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0}\\
+     \vec{E}_2=\myvec{\vec{0}&\vec{0}\\\vec{0}&\vec{I}_4}\\
+     =\myvec{0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&1&0&0&0\\0&0&0&0&1&0&0\\0&0&0&0&0&1&0\\0&0&0&0&0&0&1}
+\end{align}
+\subsection{Cyclic Decomposition}
+\textbf{Theorem 3(Cyclic Decomposition Theorem)}\\
+Let $T$ be a linear operator on a finite-dimensional vector space $\vec{V}$ and let $\vec{W}_0$ be a proper $T$-admissible subspace of $\vec{V}.$ There exists non zero vectors $\alpha_1,\alpha_2,\hdots,\alpha_r$ in $\vec{V}$ with respective $T$-annihilators $p_1,p_2,\hdots,p_r$ such that 
+\begin{enumerate}
+    \item 
+    \begin{align}
+        \vec{V}=\vec{W}_0\oplus \vec{Z}(\alpha_1;T)\oplus \vec{Z}(\alpha_2;T)\oplus\\\hdots\oplus \vec{Z}(\alpha_r;T)
+    \end{align}
+    \item $p_k$ divides $p_{k-1}$,$k=2, \hdots,r$
+\end{enumerate}
+The T-cyclic subspace $ \vec{Z}(\alpha_i;T)$ is defined as 
+\begin{align}
+   \text{degree of }p_i=k\\
+  \implies  \text{ basis of }\vec{Z}(\alpha_i;T)=\\\cbrak{\alpha_i,\vec{T}\alpha_i,\hdots,\vec{T}^{k-1}\alpha_i}
+\end{align}
+Let us choose
+\begin{align}
+ \vec{W}_0=\vec{0} ,\\
+ p_1=x^2(x-1)^2\\
+ \alpha_1=\myvec{1\\0\\0\\0\\0\\0\\0}\\
+ \vec{T}^2(\vec{T}-\vec{I})^2=\vec{0}_{7 \times 7}\\
+ \implies p_1(\vec{T})(\alpha_1)=0\\
+ \text{dim}(\vec{Z}(\alpha_1;T))=4
+ \end{align}
+ Now to chose $\alpha_2$ we need to chose a vector such that
+ \begin{align}
+ \alpha_2 \notin \vec{Z}(\alpha_1;T),p_2(\vec{T})\alpha_2=0\label{3}\\
+ p_2=x(x-1)^2\\
+  \frac{p_1}{p_2}=x \implies p_2 \text{ divides }p_1 \\
+  p_2(\vec{T})=\vec{T}(\vec{T}-\vec{I})^2=\\\myvec{0&1&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0\\0&0&0&0&0&0&0}
+  \end{align}
+  One such vector that satisfies \eqref{3} is
+  \begin{align}
+  \alpha_2=\myvec{0\\0\\1\\0\\0\\0\\0} \\
+   \text{dim}(\vec{Z}(\alpha_2;T))=3\\
+   \text{dim}\vec{Z}(\alpha_1;T)+\text{dim}\vec{Z}(\alpha_2;T)=7\\
+  \implies \vec{V}=\vec{Z}(\alpha_1;T)\oplus \vec{Z}(\alpha_2;T)
+\end{align}
+is the cyclic decomposition.
+\subsection{Invariant Factors}
+The invariant factors are 
+\begin{align}
+   p_1=x^2(x-1)^2\\
+    p_2=x(x-1)^2
+\end{align}
+\end{document}
+
+
+
+
+
